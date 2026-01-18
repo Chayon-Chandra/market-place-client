@@ -2,29 +2,45 @@ import React, { use } from "react";
 import { Link, NavLink } from "react-router";
 import { AuthConText } from "../../Context/AuthConText";
 
-
 const Navbar = () => {
-  const { user, signOutUser} = use(AuthConText);
-
+  const { user, signOutUser } = use(AuthConText);
 
   const handleSingOutUser = () => {
     signOutUser()
-    .then((result) => {
-      console.log(result.user)
-    })
-    .catch((error) => {
-      console.log(error.message)
-    })
-  }
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
 
-
-
-   const MenuLinks = <>
-    <li><NavLink to="/" className="LatoSemibold text-xl">Home</NavLink></li>
-    <li> <NavLink to="/all-Jobs" className="LatoSemibold text-xl"> All Jobs</NavLink></li>
-    <li><NavLink to="/add-a-job" className="LatoSemibold text-xl">Add a Job</NavLink></li>
-    <li><NavLink to="/my-accepted-tasks" className="LatoSemibold text-xl">My Accepted Tasks</NavLink></li>
-   </>
+  const MenuLinks = (
+    <>
+      <li>
+        <NavLink to="/" className="LatoSemibold text-xl">
+          Home
+        </NavLink>
+      </li>
+      <li>
+        {" "}
+        <NavLink to="/all-Jobs" className="LatoSemibold text-xl">
+          {" "}
+          All Jobs
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/add-a-job" className="LatoSemibold text-xl">
+          Add a Job
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/my-accepted-tasks" className="LatoSemibold text-xl">
+          My Accepted Tasks
+        </NavLink>
+      </li>
+    </>
+  );
 
   return (
     <div className="navbar bg-base-100 shadow-sm">
@@ -51,25 +67,31 @@ const Navbar = () => {
             tabIndex="-1"
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
-         {
-          MenuLinks
-         }
+            {MenuLinks}
           </ul>
         </div>
-        <a className="btn btn-ghost text-2xl latoBold">SkillNext</a>
+        <Link to="/" className="btn btn-ghost text-2xl latoBold">SkillNext</Link>
+        
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-         {
-          MenuLinks
-         }
-        </ul>
+        <ul className="menu menu-horizontal px-1">{MenuLinks}</ul>
       </div>
       <div className="navbar-end ">
-        {
-          user ? <a onClick={handleSingOutUser} className="LatoSemibold text-xl btn btn-outline btn-primary">Sign Out</a> : <Link to="/login" className="btn LatoSemibold text-xl btn btn-outline btn-primary">Login</Link>
-        }
-        
+        {user ? (
+          <a
+            onClick={handleSingOutUser}
+            className="LatoSemibold text-xl btn btn-outline btn-primary"
+          >
+            Sign Out
+          </a>
+        ) : (
+          <Link
+            to="/login"
+            className="btn LatoSemibold text-xl btn btn-outline btn-primary"
+          >
+            Login
+          </Link>
+        )}
       </div>
     </div>
   );
