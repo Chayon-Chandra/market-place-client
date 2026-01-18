@@ -1,0 +1,56 @@
+
+@import "tailwindcss";
+@plugin "daisyui";
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  --color-primary: blue;
+  --color-secondary: teal;
+}
+
+
+@font-face {
+    font-family:Lato-Bold;
+    src: url(../../market-place-client/src/assets/font/Lato-Bold.ttf);
+}
+@font-face {
+    font-family:Lato-Regular;
+    src: url(../../market-place-client/src/assets/font/Lato-Regular.ttf);
+}
+@font-face {
+    font-family:Lato-Semibold;
+    src: url(../../market-place-client/src/assets/font/Lato-Semibold.ttf);
+}
+
+.latoBold{
+    font-family:Lato-Bold;
+    font-weight: 900;
+}
+.LatoSemibold{
+    font-family:Lato-Semibold;
+    font-weight: 700;
+}
+.Lato-regular{
+    font-family:Lato-Regular;
+    font-weight: 400;
+}
+.btnButton{
+    padding: 15px 30px;
+    font-family:Lato-Bold;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-size: 700;
+    background-color: #E55473;
+    border-style: none;
+    border-radius: 10px;
+}
+.btnButton:hover{
+    color: #E55473;
+    background-color: #272727;
+    transition-duration: .3s;
+}
+
+.menu li a.active{
+    color: blue;
+    border-bottom: solid blue;
+}
