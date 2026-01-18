@@ -45,6 +45,9 @@ const Banner = () => {
                 Trusted by thousands of employers and job seekers across
                 Bangladesh.
               </p>
+              <button className="btn btn-outline btn-primary LatoSemibold text-xl">
+                Post a Job
+              </button>
             </div>
           </div>
         </SwiperSlide>
@@ -71,6 +74,9 @@ const Banner = () => {
                 Post jobs, review candidates, and hire the best talent
                 effortlessly.
               </p>
+              <button className="btn btn-outline btn-primary LatoSemibold text-xl">
+                Post a Job
+              </button>
             </div>
           </div>
         </SwiperSlide>
@@ -94,6 +100,9 @@ const Banner = () => {
               <p className="mb-6 text-lg max-w-xl mx-auto">
                 Connecting talent with opportunity. Search smarter, apply faster, and build your career with confidence.
               </p>
+              <button className="btn btn-outline btn-primary LatoSemibold text-xl">
+                Post a Job
+              </button>
             </div>
           </div>
         </SwiperSlide>
