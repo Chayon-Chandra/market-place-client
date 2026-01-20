@@ -31,6 +31,7 @@ const router = createBrowserRouter([
       },
       {
         path:"/add-a-job",
+        //  loader : ({params}) => fetch(`http://localhost:3000/products/${params.id}`),
         element: <AddJob></AddJob>,
       },
       {
