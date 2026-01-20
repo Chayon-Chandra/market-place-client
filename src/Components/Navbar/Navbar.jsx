@@ -23,9 +23,9 @@ const Navbar = () => {
         </NavLink>
       </li>
       <li>
-        {" "}
+        
         <NavLink to="/all-Jobs" className="LatoSemibold text-xl">
-          {" "}
+          
           All Jobs
         </NavLink>
       </li>

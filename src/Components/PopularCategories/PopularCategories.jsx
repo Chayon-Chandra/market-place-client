@@ -21,7 +21,7 @@ const PopularCategories = () => {
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
 
-            <div className="absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-white text-center p-4 transition-all duration-500 group-hover:opacity-0">
+            <div className="absolute inset-0  bg-black/60 flex flex-col justify-center items-center text-white text-center p-4 transition-all duration-500 group-hover:opacity-0 group-active:opacity-0">
               <h2 className="text-2xl font-semibold">Graphic Design</h2>
               <p className="text-lg mt-2">
                 Logos, banners, social media posts and brand identity designs.

@@ -36,7 +36,7 @@ const Banner = () => {
             <div className="absolute inset-0 bg-black/70"></div>
 
             
-            <div className="relative text-center text-white px-4">
+            <div className="relative text-center text-white px-4 py-4">
               <h1 className="mb-4 text-4xl md:text-5xl font-semibold">
                 Best In World <br /> Visit The Best Job Portal in Bangladesh
               </h1>
@@ -66,7 +66,7 @@ const Banner = () => {
             <div className="absolute inset-0 bg-black/70"></div>
 
            
-            <div className="relative text-center text-white px-4">
+            <div className="relative text-center text-white px-4 py-4">
               <h1 className="mb-4 text-4xl md:text-5xl font-semibold">
                 Hire Faster <br /> Find Skilled Professionals
               </h1>
@@ -93,7 +93,7 @@ const Banner = () => {
             <div className="absolute inset-0 bg-black/70"></div>
 
            
-            <div className="relative text-center text-white px-4">
+            <div className="relative text-center text-white px-4 py-4">
               <h1 className="mb-4 text-4xl md:text-5xl font-semibold">
                Best in the World <br /> Bangladesh’s Most Trusted Job Portal
               </h1>

@@ -12,6 +12,7 @@ import MyAcceptedTasks from './Pages/MyAcceptedTasks/MyAcceptedTasks.jsx';
 import Register from './Components/Register/Register.jsx';
 import Login from './Components/Login.jsx';
 import AuthProvider from './Context/AuthProvider.jsx';
+import JobDetails from './Components/JobDetails/JobDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,11 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login></Login>
+      },
+      {
+        path: "/job-details/:id",
+        loader : ({params}) => fetch(`http://localhost:3000/products/${params.id}`),
+        element: <JobDetails></JobDetails>,
       }
     ]
   },
