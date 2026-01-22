@@ -5,6 +5,7 @@ import PopularCategories from '../../Components/PopularCategories/PopularCategor
 import About from '../../Components/About/About';
 
 
+
 const latestProductsPromiss = fetch('http://localhost:3000/latest-products')
 .then(res => res.json());
 
