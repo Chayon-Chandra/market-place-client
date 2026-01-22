@@ -1,8 +1,37 @@
 import React from "react";
 import { Link, useLoaderData } from "react-router";
 import Container from "../Container/Container";
+import useAxiosSecure from "../../Hook/useAxiosSecure";
+import { toast } from "react-toastify";
 
 const JobDetails = () => {
+  const axiosSecure = useAxiosSecure();
+
+  const handleAccept = async () => {
+    const acceptedJob = {
+      jobId: jobDetailsProducts._id,
+      title: jobDetailsProducts.title,
+      category: jobDetailsProducts.category,
+      image: jobDetailsProducts.image,
+      budget: jobDetailsProducts.budget,
+      description: jobDetailsProducts.description,
+      clientName: jobDetailsProducts.clientName,
+      userEmail: jobDetailsProducts.userEmail,
+      status: "accepted",
+      createdAt: new Date(),
+    };
+    axiosSecure
+      .post("/accepted-jobs", acceptedJob)
+      .then((res) => {
+        if (res.data.insertedId) {
+          toast.success(<p><h5 className="LatoRegular text-xl text-green-500">Job Accepted Successfully!</h5></p>) 
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
   const jobDetailsProducts = useLoaderData();
   const {
     title,
@@ -76,7 +105,11 @@ const JobDetails = () => {
               </div>
             </div>
             <div className="flex justify-center items-center mt-7">
-              <Link to="/my-accepted-tasks" className="btn btn-outline btn-primary LatoSemibold text-2xl ">
+              <Link
+                to="/my-accepted-tasks"
+                onClick={handleAccept}
+                className="btn btn-outline btn-primary LatoSemibold text-2xl "
+              >
                 Accept
               </Link>
             </div>

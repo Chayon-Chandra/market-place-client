@@ -13,6 +13,8 @@ import Register from './Components/Register/Register.jsx';
 import Login from './Components/Login.jsx';
 import AuthProvider from './Context/AuthProvider.jsx';
 import JobDetails from './Components/JobDetails/JobDetails.jsx';
+import PrivetRoutes from './PrivetRoutes/PrivetRoutes.jsx';
+
 
 const router = createBrowserRouter([
   {
@@ -31,12 +33,11 @@ const router = createBrowserRouter([
       },
       {
         path:"/add-a-job",
-        //  loader : ({params}) => fetch(`http://localhost:3000/products/${params.id}`),
-        element: <AddJob></AddJob>,
+        element: <PrivetRoutes><AddJob></AddJob></PrivetRoutes>,
       },
       {
         path:"/my-accepted-tasks",
-        element: <MyAcceptedTasks></MyAcceptedTasks>
+        element: <PrivetRoutes><MyAcceptedTasks></MyAcceptedTasks></PrivetRoutes>
       },
       {
         path: "/register",
@@ -49,7 +50,7 @@ const router = createBrowserRouter([
       {
         path: "/job-details/:id",
         loader : ({params}) => fetch(`http://localhost:3000/products/${params.id}`),
-        element: <JobDetails></JobDetails>,
+        element: <PrivetRoutes><JobDetails></JobDetails></PrivetRoutes>,
       }
     ]
   },
