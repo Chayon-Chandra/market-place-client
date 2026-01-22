@@ -1,42 +1,50 @@
 import React from "react";
-
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 const Footer = () => {
   return (
-    <footer className="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
-      <nav>
-        <h6 className="footer-title">Services</h6>
-        <a className="link link-hover">Branding</a>
-        <a className="link link-hover">Design</a>
-        <a className="link link-hover">Marketing</a>
-        <a className="link link-hover">Advertisement</a>
-      </nav>
-      <nav>
-        <h6 className="footer-title">Company</h6>
-        <a className="link link-hover">About us</a>
-        <a className="link link-hover">Contact</a>
-        <a className="link link-hover">Jobs</a>
-        <a className="link link-hover">Press kit</a>
-      </nav>
-      <nav>
-        <h6 className="footer-title">Legal</h6>
-        <a className="link link-hover">Terms of use</a>
-        <a className="link link-hover">Privacy policy</a>
-        <a className="link link-hover">Cookie policy</a>
-      </nav>
-      <form>
-        <h6 className="footer-title">Newsletter</h6>
-        <fieldset className="w-80">
-          <label>Enter your email address</label>
-          <div className="join">
-            <input
-              type="text"
-              placeholder="username@site.com"
-              className="input input-bordered join-item"
-            />
-            <button className="btn btn-primary join-item">Subscribe</button>
-          </div>
-        </fieldset>
-      </form>
+    <footer className="bg-black text-white py-10">
+      <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+        
+
+        <div className="flex flex-col items-center md:items-start">
+          <h1 className="text-2xl font-bold mb-2">MarketPlace</h1>
+          <p className="text-sm opacity-80">
+            &copy; {new Date().getFullYear()} Chayon Sarker. All rights reserved.
+          </p>
+        </div>
+
+
+        <div className="flex gap-6 text-sm md:text-base font-medium">
+          <a href="#" className="hover:text-yellow-500 transition-colors duration-300">
+            Home
+          </a>
+          <a href="#" className="hover:text-yellow-500 transition-colors duration-300">
+            Jobs
+          </a>
+          <a href="#" className="hover:text-yellow-500 transition-colors duration-300">
+            About
+          </a>
+          <a href="#" className="hover:text-yellow-500 transition-colors duration-300">
+            Contact
+          </a>
+        </div>
+
+
+        <div className="flex gap-4 text-lg">
+          <a href="#" className="hover:text-yellow-500 transition-transform transform hover:scale-125">
+            <FaFacebookF />
+          </a>
+          <a href="#" className="hover:text-yellow-500 transition-transform transform hover:scale-125">
+            <FaTwitter />
+          </a>
+          <a href="#" className="hover:text-yellow-500 transition-transform transform hover:scale-125">
+            <FaInstagram />
+          </a>
+          <a href="#" className="hover:text-yellow-500 transition-transform transform hover:scale-125">
+            <FaLinkedinIn />
+          </a>
+        </div>
+      </div>
     </footer>
   );
 };

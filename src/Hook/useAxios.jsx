@@ -1,11 +1,10 @@
-import axios from "axios"
+import axios from "axios";
 
 const axiosInstance = axios.create({
-    baseURL: 'http://localhost:3000'
-})
+  baseURL: "https://market-place-api-server.vercel.app",
+});
 
 const useAxios = () => {
-    return axiosInstance;
-
-}
- export default useAxios;
+  return axiosInstance;
+};
+export default useAxios;

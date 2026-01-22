@@ -1,16 +1,20 @@
-# React + Vite
+🔹 Project Name: Freelance MarketPlace
+    Live Link: https://market-place-47e5c.web.app/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+🔹 Key Features of Market Place App
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✅ User Authentication & Authorization
+Secure login and registration system using Firebase Authentication (Email/Google).
 
-## React Compiler
+✅ Dynamic Product / Job Listing System
+Users can add, view, update, and manage marketplace items or job posts in real time.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+✅ Responsive & Modern UI
+Fully responsive design built with React and Tailwind CSS, optimized for all devices.
 
-## Expanding the ESLint configuration
+✅ Real-time Data Update Without Page Refresh
+Newly added items appear instantly using efficient state management.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+✅ Secure Backend API Integration
+Protected REST APIs with token-based authentication for safe data transactions.
